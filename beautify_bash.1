@@ -4,7 +4,7 @@
 .\" First parameter, NAME, should be all caps
 .\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
 .\" other parameters are allowed: see man(7), man(1)
-.TH Beautify-bash 1 "July  9 2017"
+.TH Beautify-bash 1 "July 11 2017"
 .\" Please adjust this date whenever revising the manpage.
 .\"
 .\" Some roff macros, for reference:
@@ -21,16 +21,24 @@
 beautify-bash \- A beautifier for Bash shell scripts written in Python
 .SH SYNOPSIS
 .B beautify-bash
-.RI " files" ...
+[\fB\-h\fR|\fB\-t\fR \fITABSIZE\fR]
+[<file>|-] ...
 .SH DESCRIPTION
 This manual page documents briefly the
 .B beautify-bash
 command.
 .PP
 .\" TeX users may be more comfortable with the \fB<whatever>\fP and
-.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" \fI<whatever>\fP escape sequences to invoke bold face and italics,
 .\" respectively.
-\fBbeautify-bash\fP is a program that indets and stuff Bash shell scripts.
+\fBbeautify-bash\fP is a program that indents and stuff Bash shell scripts.
 .SH OPTIONS
-These programs follow the usual dashe (`-') means use stdin/out.
+.TP
+.BR \-t " " \fITABSIZE\fR
+Set the size of each indentation
+.TP
+.BR \-h
+Ignores any files and does not process stdin.  Shows usage.
+.PP
+These programs follow the usual dashes (`-') means use stdin/out.
 Files are modified and backups created with tilde (`~') suffix.
