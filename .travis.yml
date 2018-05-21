@@ -7,5 +7,13 @@ addons:
     packages:
       - libtest-differences-perl
 
+env:
+- PROVEFLAGS="-f"
+- PROVEFLAGS="-f -v t_todo"
+
+matrix:
+  allow_failures:
+  - env: PROVEFLAGS="-f -v t_todo"
+
 script:
   - make test
