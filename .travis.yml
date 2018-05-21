@@ -4,6 +4,7 @@ install: true
 
 addons:
   apt:
+    update: true
     packages:
       - libtest-differences-perl
 
